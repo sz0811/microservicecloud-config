@@ -1,0 +1,32 @@
+spring:
+ profiles:
+  active:
+  - dev
+
+---
+server:
+ port: 8201
+spring:
+ profiles: dev
+ application:
+  name: microservicecloud-config-client
+
+eureka:
+ client:
+  server-url:
+   defualtZone: http://eureka-dev.com:7001/eureka
+
+---
+server:
+ port: 8202
+spring:
+ profiles: test
+ application:
+  name: microservicecloud-config-client
+
+eureka:
+ client:
+  server-url:
+   defualtZone: http://eureka-tests.com:7001/eureka
+
+#请保存为UTF-8格式
